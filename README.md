@@ -466,4 +466,4 @@ Anis Haboubi
 
 ## License
 
-A short snippet describing the license (MIT, Apache, etc.)
+See [LICENSE.txt](LICENSE.txt) for more info.
