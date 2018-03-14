@@ -29,7 +29,11 @@
   "bugs": {
     "url": "https://github.com/4N1S/opendata-node/issues"
   },
+<<<<<<< HEAD
+  "homepage": "https://github.com/4N1S/ethplorer-node#readme",
+=======
   "homepage": "https://github.com/4N1S/opendata-node#readme",
+>>>>>>> 1681db07ea3a209c440fe677a5d6898d225f4734
   "directories": {
     "example": "examples"
   },

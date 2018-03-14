@@ -5,7 +5,11 @@ var crypto = require('crypto');
 var url = require('url');
 var urlencode = require('urlencode');
 
+<<<<<<< HEAD
+var ethplorer = function(key,secret,verbose) {
+=======
 var opendatanode = function(host,version,key,secret,verbose) {
+>>>>>>> 1681db07ea3a209c440fe677a5d6898d225f4734
 	this.verbose = verbose || false;
 	this.version = "0.0.1";
 	this.key = key;
