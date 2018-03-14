@@ -1,20 +1,9 @@
-var OPDBXL = require('../index.js');
+var ethplorerClient = require('../index.js');
 // Public API
-// var location="bruxelles";
-// var domaine="be";
-// var host="opendata."+location+"."+domaine;//#or our host data.iledefrance.fr
-var host="public.opendatasoft.com";
-var client = new OPDBXL(host,"1.0");//#or 2.0
-
-//Params
-var lang="fr";
-var q="car";
-var rows="1";
-var refinetype="modified";
-var refine="2013";
-
-//function Search
-client.search(q,lang,rows,"","",function (error, data) {
+var api_key="freekey";
+var client = new ethplorerClient();
+var limit="5";
+client.getTokenHistory(limit,function (error, data) {
 	if(error) console.log("E!",error)
 	console.dir(data);
 });

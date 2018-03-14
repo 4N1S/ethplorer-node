@@ -1,41 +1,28 @@
 {
-  "name": "opendata-node",
-  "version": "0.0.1",
-  "description": "wrapper api for opendatasoft API",
-  "main": "index.js",
+  "name": "ethplorer-node",
+  "version": "1.0.0",
+  "description": "a wrapper api for ethplorer API ",
+  "main": "test.js",
   "scripts": {
-    "test": "npm test.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/4N1S/opendata-node.git"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "opendata",
-    "opendatasoft",
-    "opendataplorer",
+    "api",
+    "wrapper",
     "nodejs",
-    "wrapper"
+    "client",
+    "ethplorer",
+    "etherscan",
+    "ethereum"
   ],
   "author": "Anis Haboubi",
   "license": "MIT",
   "dependencies": {
+    "ethplorer-node":"ethplorer-node",
     "crypto": "latest",
     "https": "latest",
     "underscore": "latest",
     "url": "latest",
     "urlencode": "latest"
-  },
-  "bugs": {
-    "url": "https://github.com/4N1S/opendata-node/issues"
-  },
-<<<<<<< HEAD
-  "homepage": "https://github.com/4N1S/ethplorer-node#readme",
-=======
-  "homepage": "https://github.com/4N1S/opendata-node#readme",
->>>>>>> 1681db07ea3a209c440fe677a5d6898d225f4734
-  "directories": {
-    "example": "examples"
-  },
-  "devDependencies": {}
+  }
 }
