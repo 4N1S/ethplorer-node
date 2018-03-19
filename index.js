@@ -97,11 +97,17 @@ ethplorer.prototype.pubRequest = function(method, params, callback) {
 	};
 	console.log(options.path);
 	cb = function(response) {
+		if (response.statusCode < 200 || response.statusCode > 299) {
+		   callback(response.statusCode);
+		 }
+		if(response.statusCode==200){
 		var str = '';
 		response.on('data', function (chunk) {
 			str += chunk;
 			if (options.verbose) console.log(str);
 		});
+
+
 		response.on('end', function () {
 			var objFromJSON;
 			try {
@@ -112,10 +118,11 @@ ethplorer.prototype.pubRequest = function(method, params, callback) {
 				return callback(err, null);
 			}
 		});
+		}
 	}
 	var req = https.request(options, cb);
 	req.on('error', function(err) {
-		callback(err, null);
+		callback(err.status, null);
 	});
 
 	req.end();
