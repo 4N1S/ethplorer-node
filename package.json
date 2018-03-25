@@ -1,6 +1,6 @@
 {
   "name": "ethplorer-node",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "a wrapper api for ethplorer API ",
   "main": "test.js",
   "scripts": {
