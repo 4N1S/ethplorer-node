@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4N1S/ethplorer-node.git"
+  },
   "keywords": [
     "api",
     "wrapper",
@@ -24,5 +28,13 @@
     "underscore": "latest",
     "url": "latest",
     "urlencode": "latest"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/4N1S/ethplorer-node/issues"
+  },
+  "homepage": "https://github.com/4N1S/ethplorer-node#readme",
+  "directories": {
+    "example": "examples"
+  },
+  "devDependencies": {}
 }
