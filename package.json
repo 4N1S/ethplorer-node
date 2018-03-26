@@ -1,6 +1,6 @@
 {
   "name": "ethplorer-node",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "a wrapper api for ethplorer API ",
   "main": "test.js",
   "scripts": {
@@ -22,7 +22,6 @@
   "author": "Anis Haboubi",
   "license": "MIT",
   "dependencies": {
-    "ethplorer-node":"ethplorer-node",
     "crypto": "latest",
     "https": "latest",
     "underscore": "latest",
