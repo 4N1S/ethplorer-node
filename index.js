@@ -26,7 +26,7 @@ var ethplorer = function(key, secret, verbose) {
 // Public API
 
 ethplorer.prototype.getTokenHistory = function(limit,callback) {
-		this.pubRequest('getTokenHistory?apiKey=freekey&limit='+limit+'', {}, function(err, data) {
+		this.pubRequest('getTokenHistory?apiKey='+this.key+'&limit='+limit+'', {}, function(err, data) {
 		return callback(err, data);
 	});
 }
@@ -46,21 +46,21 @@ ethplorer.prototype.getTxInfo = function(address, callback) {
 		return callback(err, data);
 	});
 }
-ethplorer.prototype.getTokenHistoryparam = function(apiKey,type, limit, callback) {
-	this.pubRequest("getTokenHistory?apiKey="+apiKey+"&limit="+type+"&limit="+limit,{}, function(err, data) {
+ethplorer.prototype.getTokenHistoryparam = function(type, limit, callback) {
+	this.pubRequest("getTokenHistory?apiKey="+this.key+"&limit="+type+"&limit="+limit,{}, function(err, data) {
 		return callback(err, data);
 	});
 };
 
 
-ethplorer.prototype.getAddressHistory = function(apiKey,address,token,type, callback) {
-	this.pubRequest('getAddressHistory/' + address +"?apiKey="+apiKey+"&token="+token+"&type="+type, {}, function(err, data) {
+ethplorer.prototype.getAddressHistory = function(address,token,type, callback) {
+	this.pubRequest('getAddressHistory/' + address +"?apiKey="+this.key+"&token="+token+"&type="+type, {}, function(err, data) {
 		return callback(err, data);
 	});
 }
 
-ethplorer.prototype.getAddressTransactions = function(apiKey,address,limit, callback) {
-	this.pubRequest('getAddressTransactions/' + address +"?apiKey="+apiKey+"&limit="+limit, {}, function(err, data) {
+ethplorer.prototype.getAddressTransactions = function(address,limit, callback) {
+	this.pubRequest('getAddressTransactions/' + address +"?apiKey="+this.key+"&limit="+limit, {}, function(err, data) {
 		return callback(err, data);
 	});
 }
@@ -71,18 +71,18 @@ ethplorer.prototype.getTop = function(apiKey,criteria,limit, callback) {
 	});
 }
 
-ethplorer.prototype.getTopTokens = function(apiKey,period,limit, callback) {
-	this.pubRequest("getTopTokens?apiKey="+apiKey+"&period="+period+"&limit="+limit+"",{}, function(err, data) {
+ethplorer.prototype.getTopTokens = function(period,limit, callback) {
+	this.pubRequest("getTopTokens?apiKey="+this.key+"&period="+period+"&limit="+limit+"",{}, function(err, data) {
 		return callback(err, data);
 	});
 }
-ethplorer.prototype.getTokenHistoryGrouped = function(apiKey,address,period, callback) {
-	this.pubRequest("getTokenHistoryGrouped/"+address+"?apiKey="+apiKey+"&period="+period,{}, function(err, data) {
+ethplorer.prototype.getTokenHistoryGrouped = function(address,period, callback) {
+	this.pubRequest("getTokenHistoryGrouped/"+address+"?apiKey="+this.key+"&period="+period,{}, function(err, data) {
 		return callback(err, data);
 	});
 }
-ethplorer.prototype.getTokenPriceHistoryGrouped = function(apiKey,address,period, callback) {
-	this.pubRequest("getTokenPriceHistoryGrouped/"+address+"?apiKey="+apiKey+"&period="+period,{}, function(err, data) {
+ethplorer.prototype.getTokenPriceHistoryGrouped = function(address,period, callback) {
+	this.pubRequest("getTokenPriceHistoryGrouped/"+address+"?apiKey="+this.key+"&period="+period,{}, function(err, data) {
 		return callback(err, data);
 	});
 }
