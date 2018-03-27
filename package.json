@@ -10,9 +10,6 @@
     "type": "git",
     "url": "git+https://github.com/4N1S/ethplorer-node.git"
   },
-  "engines": {
-    "node": ">=0.10.0"
-  },
   "keywords": [
     "api",
     "wrapper",
