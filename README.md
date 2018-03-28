@@ -18,16 +18,16 @@ var ethplorerClient = require('ethplorer-node');
 ```javasctipt
 // Public API
 var api_key="freekey";
-var client = new ethplorerClient();
+var client = new ethplorerClient(api_key);
 ```
 
-##Ethplorer API
+## Ethplorer API
 
 Ethplorer’s API may be used to get information about Ethereum tokens, contracts, transactions and custom structures. This is still beta version of service. There is no any warranty for provided data.
 
 Free API-Key is freekey. Please don’t overload our servers. We would much appreaciate “Powered by Ethplorer.io” backlink on your pages. If you need more data or highload of service – contact us to get personal API key.
 
-###API Index
+### API Index
 Api's server address: https://api.ethplorer.io/, method GET. Each request should have a mandatory apiKey parameter.
 
 ## Methods
