@@ -37,7 +37,7 @@ ethplorer.prototype.getTokenInfo = function(address, callback) {
 	});
 }
 ethplorer.prototype.getAddressInfo = function(address, callback) {
-	this.pubRequest('getAddressInfo/' + address, {}, function(err, data) {
+	this.pubRequest('getAddressInfo/'+address+'?apiKey='+this.key, {}, function(err, data) {
 		return callback(err, data);
 	});
 }
@@ -52,9 +52,20 @@ ethplorer.prototype.getTokenHistoryparam = function(type, limit, callback) {
 	});
 };
 
-
-ethplorer.prototype.getAddressHistory = function(address,token,type, callback) {
-	this.pubRequest('getAddressHistory/' + address +"?apiKey="+this.key+"&token="+token+"&type="+type, {}, function(err, data) {
+/**
+ * Retrieves the address history
+ * @param {string} address the ETH address
+ * @param {object} params the request parameters {[token], [type], [limit]}
+ * @param {function} callback should return the response
+ */
+ethplorer.prototype.getAddressHistory = function(address, params, callback) {
+	var paramsAry = []
+	if (params) {
+		if (params.token) paramsAry.push('token=' + params.token)
+		if (params.type) paramsAry.push('type=' + params.type)
+		if (params.limit) paramsAry.push('limit=' + params.limit)
+	}
+	this.pubRequest('getAddressHistory/' + address + '?apiKey=' + this.key + '&' + paramsAry.join('&'), {}, function(err, data) {
 		return callback(err, data);
 	});
 }
