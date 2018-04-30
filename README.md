@@ -21,6 +21,13 @@ var api_key="freekey";
 var client = new ethplorerClient(api_key);
 ```
 
+## Usage
+```
+client.getAddressInfo(erc20address, function (err, data) {
+	console.log(data)
+})
+```
+
 ## Ethplorer API
 
 Ethplorer’s API may be used to get information about Ethereum tokens, contracts, transactions and custom structures. This is still beta version of service. There is no any warranty for provided data.
